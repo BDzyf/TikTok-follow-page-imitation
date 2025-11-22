@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_dialog_round">
+
+    <!-- 标题：黑色字体，居中显示 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="设置备注"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal" />
+
+    <!-- 输入框：浅灰色背景 -->
+    <EditText
+        android:id="@+id/et_remark"
+        android:hint="请输入备注"
+        android:textSize="14sp"
+        android:background="#F5F5F5"
+        android:padding="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!-- 浅色分割线 -->
+    <View
+        android:background="#E0E0E0"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="12dp"/>
+
+    <!-- 按钮行：两按钮平分 -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- 取消按钮：占 50% -->
+        <TextView
+            android:id="@+id/btn_cancel"
+            android:text="取消"
+            android:textSize="14sp"
+            android:textColor="#999999"
+            android:gravity="center"
+            android:paddingVertical="8dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"/>
+
+        <!-- 竖直分割线 -->
+        <View
+            android:background="#E0E0E0"
+            android:layout_width="0.5dp"
+            android:layout_height="24dp" android:layout_gravity="center_vertical"/>
+
+        <!-- 确认按钮：占 50% -->
+        <TextView
+            android:id="@+id/btn_confirm"
+            android:text="确认"
+            android:textSize="14sp"
+            android:textColor="#FF000000"
+            android:gravity="center"
+            android:paddingVertical="8dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</LinearLayout>
