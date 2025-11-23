@@ -74,6 +74,11 @@ public class FollowUser implements Parcelable {
      * Parcelable 构造函数
      * @param in Parcel 数据
      */
+
+    /**
+     *这里还应该设置一个特别关注的时间，特别关注的用户们可以按照特别关注时间进行排序
+     */
+
     @Ignore
     protected FollowUser(@NonNull Parcel in) {
         uid = in.readLong();

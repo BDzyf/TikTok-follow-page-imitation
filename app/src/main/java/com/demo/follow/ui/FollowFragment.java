@@ -80,9 +80,8 @@ public class FollowFragment extends Fragment {
 
         adapter = new FollowAdapter(
                 repository,
-                douyinId -> {
-                    FollowUser user = repository.getUserByDouyinIdLive(douyinId).getValue();
-                    if (user != null && user.status == 0) {
+                (douyinId, status) -> {
+                    if (status == 0) {
                         Toast.makeText(requireContext(), "已取关，无法使用", Toast.LENGTH_SHORT).show();
                     } else {
                         UserActionBottomSheet.showForUser(getChildFragmentManager(), douyinId);

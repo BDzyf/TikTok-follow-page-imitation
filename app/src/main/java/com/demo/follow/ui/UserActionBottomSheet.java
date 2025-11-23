@@ -102,7 +102,15 @@ public class UserActionBottomSheet extends BottomSheetDialogFragment {
             tvNameOnly.setText(displayName);
 
             // 第二行：显示详细信息（抖音号 + 昵称）
-            tvUser.setText("名字：" + user.nick + " | 抖音号：" + user.douyinId);
+            if (user.remark != null && !user.remark.isEmpty()
+                    && !DEFAULT_REMARK_HINT.equals(user.remark)
+                    && !DEFAULT_REMARK_INPUT_HINT.equals(user.remark)) {
+                // 已设置备注：显示完整信息（名字 + 抖音号）
+                tvUser.setText("名字：" + user.nick + " | 抖音号：" + user.douyinId);
+            } else {
+                // 未设置备注：只显示抖音号
+                tvUser.setText("抖音号：" + user.douyinId);
+            }
 
             swSpecial.setChecked(user.isSpecial);
         });

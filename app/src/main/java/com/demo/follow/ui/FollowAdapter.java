@@ -24,7 +24,7 @@ public class FollowAdapter extends ListAdapter<FollowUser, FollowAdapter.VH> {
      * 更多按钮点击回调接口（传抖音号）
      */
     public interface OnMoreClick {
-        void click(String douyinId);
+        void click(String douyinId,int status);
     }
 
     private final FollowRepository repository;
@@ -62,7 +62,7 @@ public class FollowAdapter extends ListAdapter<FollowUser, FollowAdapter.VH> {
 
         // 设置点击事件
         holder.btn.setOnClickListener(v -> repository.toggleFollow(user.douyinId));
-        holder.more.setOnClickListener(v -> callback.click(user.douyinId));
+        holder.more.setOnClickListener(v -> callback.click(user.douyinId, user.status));
         holder.itemView.setOnClickListener(v -> {
             Toast.makeText(v.getContext().getApplicationContext(),
                     "已选中" + displayName, Toast.LENGTH_SHORT).show();
