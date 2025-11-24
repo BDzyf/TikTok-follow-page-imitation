@@ -1,7 +1,9 @@
 # TikTok-follow-page-imitation
 第一届字节跳动工程训练营客户端方向第一次作业，一个高度还原抖音关注页面的 Android 应用，基于现代 Android 架构组件开发，实现了关注列表管理、特别关注、备注设置、取消关注等核心功能，具备优秀的性能和可扩展性。
 ## 项目演示
-
+https://github.com/user-attachments/assets/853926ce-acce-4639-8435-456e6fa3365b
+## 学习总结
+https://ucnsofts44q8.feishu.cn/wiki/DXWXwntqEiDLfjkStbkcUM94njc
 ## ✨ 功能特性
 
 - **关注列表**
@@ -22,7 +24,7 @@
 - **高性能交互**
   - RecyclerView + DiffUtil 局部刷新
   - ViewHolder 缓存优化
-  - 异步线程池处理数据库操作
+  - 自定义线程池处理数据库操作
   - Glide 加载圆形头像
 
 ## 🏗️ 技术架构
@@ -63,7 +65,7 @@
 | **Glide** | 本地圆形头像加载 |
 | **ViewPager2 + TabLayout** | 多标签页切换 |
 | **Material Design** | 底部弹窗、开关组件 |
-| **Executors** | 自定义线程池管理异步任务 |
+| **Executors** | 自定义线程池 |
 
 ## 📁 项目结构
 
@@ -99,27 +101,24 @@ app/src/main/
 ## 🚀 如何运行
 
 ### 环境要求
-- Android Studio Arctic Fox 或更高版本
-- JDK 11
-- Android SDK API 21+
+- Android Studio Otter
+- JDK 17
+- Android SDK API 24+
 
 ### 运行步骤
 
 1. **克隆仓库**
    ```bash
-   git clone https://github.com/your-username/douyin-follow-demo.git
-   cd douyin-follow-demo
+   git clone https://github.com/your-username/TikTok-follow-page-imitation
+   cd TikTok-follow-page-imitation
    ```
 
-2. **准备预置数据库**
-   - 将示例数据库文件 `follow_v1.db` 放入 `app/src/main/assets/` 目录
-
-3. **编译运行**
+2. **编译运行**
    - 在 Android Studio 中打开项目
    - 等待 Gradle 同步完成
    - 点击 ▶ Run 运行到模拟器/真机
 
-4. **查看效果**
+3. **查看效果**
    - 默认显示"互关"标签页
    - 右滑查看更多标签页（关注、粉丝、朋友）
 
