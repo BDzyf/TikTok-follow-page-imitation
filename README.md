@@ -103,13 +103,13 @@ app/src/main/
 ### 环境要求
 - Android Studio Otter
 - JDK 17
-- Android SDK API 24+
+- Android SDK API 24
 
 ### 运行步骤
 
 1. **克隆仓库**
    ```bash
-   git clone https://github.com/your-username/TikTok-follow-page-imitation
+   git clone https://github.com/BDzyf/TikTok-follow-page-imitation
    cd TikTok-follow-page-imitation
    ```
 
