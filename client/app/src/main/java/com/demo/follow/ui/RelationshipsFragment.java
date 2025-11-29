@@ -1,0 +1,55 @@
+package com.demo.follow.ui;
+
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.viewpager2.widget.ViewPager2;
+import com.demo.follow.R;
+import com.google.android.material.tabs.TabLayout;
+import com.google.android.material.tabs.TabLayoutMediator;
+
+/**
+ * 关系页面Fragment
+ * 管理互关、关注、粉丝、朋友四个标签页，使用ViewPager2实现滑动切换
+ */
+public class RelationshipsFragment extends Fragment {
+
+    /**
+     * ViewPager2预加载页面数量
+     * 预加载3个非当前页面，避免重复创建Fragment，提升滑动流畅度
+     */
+    private static final int OFFSCREEN_PAGE_LIMIT = 3;
+
+    @Nullable
+    @Override
+    public View onCreateView(@NonNull LayoutInflater inflater,
+                             @Nullable ViewGroup container,
+                             @Nullable Bundle savedInstanceState) {
+        View rootView = inflater.inflate(R.layout.fragment_relationships, container, false);
+        setupViewPager(rootView);
+        return rootView;
+    }
+
+    /**
+     * 初始化并配置ViewPager2和TabLayout
+     * @param rootView 根布局视图
+     */
+    private void setupViewPager(View rootView) {
+        ViewPager2 viewPager = rootView.findViewById(R.id.viewpager);
+        TabLayout tabLayout = rootView.findViewById(R.id.tab_layout);
+
+        // 设置适配器并启用页面预加载
+        RelationshipsPagerAdapter adapter = new RelationshipsPagerAdapter(this);
+        viewPager.setAdapter(adapter);
+        viewPager.setOffscreenPageLimit(OFFSCREEN_PAGE_LIMIT);
+
+        // 关联TabLayout与ViewPager2，自动同步标签与页面
+        new TabLayoutMediator(tabLayout, viewPager, (tab, position) -> {
+            tab.setText(adapter.getPageTitle(position));
+        }).attach();
+    }
+}
