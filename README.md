@@ -1,9 +1,6 @@
 # TikTok-follow-page-imitation
 第一届字节跳动工程训练营客户端方向第一次作业，一个高度还原抖音关注页面的 Android 应用，基于现代 Android 架构组件开发，实现了关注列表管理、特别关注、备注设置、取消关注等核心功能，具备优秀的性能和可扩展性。
-## 项目演示
-https://github.com/user-attachments/assets/853926ce-acce-4639-8435-456e6fa3365b
-## 学习总结
-https://ucnsofts44q8.feishu.cn/wiki/DXWXwntqEiDLfjkStbkcUM94njc
+
 ## ✨ 功能特性
 
 - **关注列表**
