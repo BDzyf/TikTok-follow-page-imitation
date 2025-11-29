@@ -86,7 +86,7 @@ app/src/main/
 
 ### 1. 克隆仓库
 ```bash
-git clone https://github.com/BDzyf/TikTok-follow-page-imitation
+git clone https://github.com/BDzyf/TikTok-follow-page-imitation -b version2
 cd TikTok-follow-page-imitation
 ```
 
